@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using System.Net.Http;
 using System.IO;
 using System.Text;
 
@@ -17,13 +18,14 @@ namespace smiteBuilderAPI.Controllers
     [ApiController]
     public class ApiController : ControllerBase
     {
-        protected string smiteApi = "http:/api.ps4.smitegame.com/smiteapi.svc/pingjson";
+        protected string smiteApi = "http://api.ps4.smitegame.com/smiteapi.svc/pingjson";
+        protected HttpClient client = new HttpClient();
 
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public string Get()
         {
-            return new string[] { "character1", "character2" };
+            return CreateGetRequest(smiteApi).Result;
         }
 
 
@@ -35,8 +37,8 @@ namespace smiteBuilderAPI.Controllers
         }
 
         //Get
-        public string CreateGetRequest(string uri)
-        {
+        public async Task<string> CreateGetRequest(string uri)
+        { 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
             request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
 
@@ -44,7 +46,7 @@ namespace smiteBuilderAPI.Controllers
             using (Stream stream = response.GetResponseStream())
             using (StreamReader reader = new StreamReader(stream))
             {
-                return reader.ReadToEnd();
+                return await reader.ReadToEndAsync();
             }
         }
 
