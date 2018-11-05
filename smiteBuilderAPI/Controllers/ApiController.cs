@@ -8,7 +8,12 @@ using System.Net.Http;
 using System.IO;
 using System.Text;
 
-
+//TODO consume & validate POST request from SmiteBuilderApp
+//TODO create a login method
+//TODO create new session method
+//TODO validate active session
+//TODO create signature
+//TODO create timestamp and format yyyymmddhms
 
 namespace smiteBuilderAPI.Controllers
 {
@@ -18,14 +23,14 @@ namespace smiteBuilderAPI.Controllers
     [ApiController]
     public class ApiController : ControllerBase
     {
-        protected string smiteApi = "http://api.ps4.smitegame.com/smiteapi.svc/pingjson";
+        protected string smiteApi = "http://api.ps4.smitegame.com/smiteapi.svc/";
         protected HttpClient client = new HttpClient();
 
         // GET api/values
         [HttpGet]
         public string Get()
         {
-            return CreateGetRequest(smiteApi).Result;
+            //return CreateGetRequest(smiteApi).Result;
         }
 
 
@@ -51,7 +56,7 @@ namespace smiteBuilderAPI.Controllers
         }
 
         //Post
-        public string CreatePostRequest(string uri, string data, string contentType, string method = "POST")
+        public async Task<string> CreatePostRequest(string uri, string data, string contentType, string method = "POST")
         {
             byte[] dataBytes = Encoding.UTF8.GetBytes(data);
 
@@ -70,7 +75,7 @@ namespace smiteBuilderAPI.Controllers
             using (Stream stream = response.GetResponseStream())
             using (StreamReader reader = new StreamReader(stream))
             {
-                return reader.ReadToEnd();
+                return await reader.ReadToEndAsync();
             }
         }
     }
