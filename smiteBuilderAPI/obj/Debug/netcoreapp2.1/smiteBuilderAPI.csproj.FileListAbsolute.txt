@@ -1,0 +1,14 @@
+/home/periagiaka/Projects/smiteBuilderAPI/smiteBuilderAPI/bin/Debug/netcoreapp2.1/smiteBuilderAPI.deps.json
+/home/periagiaka/Projects/smiteBuilderAPI/smiteBuilderAPI/bin/Debug/netcoreapp2.1/smiteBuilderAPI.runtimeconfig.json
+/home/periagiaka/Projects/smiteBuilderAPI/smiteBuilderAPI/bin/Debug/netcoreapp2.1/smiteBuilderAPI.runtimeconfig.dev.json
+/home/periagiaka/Projects/smiteBuilderAPI/smiteBuilderAPI/bin/Debug/netcoreapp2.1/smiteBuilderAPI.dll
+/home/periagiaka/Projects/smiteBuilderAPI/smiteBuilderAPI/bin/Debug/netcoreapp2.1/smiteBuilderAPI.pdb
+/home/periagiaka/Projects/smiteBuilderAPI/smiteBuilderAPI/obj/Debug/netcoreapp2.1/smiteBuilderAPI.csprojAssemblyReference.cache
+/home/periagiaka/Projects/smiteBuilderAPI/smiteBuilderAPI/obj/Debug/netcoreapp2.1/smiteBuilderAPI.csproj.CoreCompileInputs.cache
+/home/periagiaka/Projects/smiteBuilderAPI/smiteBuilderAPI/obj/Debug/netcoreapp2.1/smiteBuilderAPI.RazorAssemblyInfo.cache
+/home/periagiaka/Projects/smiteBuilderAPI/smiteBuilderAPI/obj/Debug/netcoreapp2.1/smiteBuilderAPI.RazorAssemblyInfo.cs
+/home/periagiaka/Projects/smiteBuilderAPI/smiteBuilderAPI/obj/Debug/netcoreapp2.1/smiteBuilderAPI.AssemblyInfoInputs.cache
+/home/periagiaka/Projects/smiteBuilderAPI/smiteBuilderAPI/obj/Debug/netcoreapp2.1/smiteBuilderAPI.AssemblyInfo.cs
+/home/periagiaka/Projects/smiteBuilderAPI/smiteBuilderAPI/obj/Debug/netcoreapp2.1/smiteBuilderAPI.RazorTargetAssemblyInfo.cache
+/home/periagiaka/Projects/smiteBuilderAPI/smiteBuilderAPI/obj/Debug/netcoreapp2.1/smiteBuilderAPI.dll
+/home/periagiaka/Projects/smiteBuilderAPI/smiteBuilderAPI/obj/Debug/netcoreapp2.1/smiteBuilderAPI.pdb

@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "smiteBuilderAPI", "smiteBuilderAPI\smiteBuilderAPI.csproj", "{8446A0CC-619F-4BD2-84D1-436447AF951B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8446A0CC-619F-4BD2-84D1-436447AF951B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8446A0CC-619F-4BD2-84D1-436447AF951B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8446A0CC-619F-4BD2-84D1-436447AF951B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8446A0CC-619F-4BD2-84D1-436447AF951B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

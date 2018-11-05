@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{8446A0CC-619F-4BD2-84D1-436447AF951B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="smiteBuilderAPI/Controllers/ApiController.cs">
+    <Files>
+      <File FileName="smiteBuilderAPI/Program.cs" Line="1" Column="1" />
+      <File FileName="smiteBuilderAPI/Controllers/ApiController.cs" Line="9" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.smiteBuilderAPI PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
