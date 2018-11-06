@@ -12,8 +12,8 @@ using System.Text;
 //TODO create a login method
 //TODO create new session method
 //TODO validate active session
-//TODO create signature
-//TODO create timestamp and format yyyymmddhms
+//TODO create GetRequest method
+//TODO adjust TimeStamp to match local timezone
 
 namespace smiteBuilderAPI.Controllers
 {
@@ -25,12 +25,15 @@ namespace smiteBuilderAPI.Controllers
     {
         protected string smiteApi = "http://api.ps4.smitegame.com/smiteapi.svc/";
         protected HttpClient client = new HttpClient();
+        private readonly string devToken = "E7721C9709954A5A8308ACC5EE55E03A";
+        private readonly string devId = "2900";
 
         // GET api/values
         [HttpGet]
         public string Get()
         {
-            //return CreateGetRequest(smiteApi).Result;
+            return CreateSession("createsession");
+           // return CreateGetRequest(uri).Result;
         }
 
 
@@ -77,6 +80,32 @@ namespace smiteBuilderAPI.Controllers
             {
                 return await reader.ReadToEndAsync();
             }
+        }
+
+        private string CreateTimeStamp()
+        {
+            return DateTime.Now.ToString("yyyyMMddHHmmss"); // case sensitive
+        }
+
+        private string CreateSignature(string route)
+        {
+            string signature = devId + route + devToken + CreateTimeStamp();
+            var md5 = new System.Security.Cryptography.MD5CryptoServiceProvider();
+            var bytes = System.Text.Encoding.UTF8.GetBytes(signature);
+            bytes = md5.ComputeHash(bytes);
+            var sb = new System.Text.StringBuilder();
+            foreach (byte b in bytes)
+            {
+                sb.Append(b.ToString("x2").ToLower());
+            }
+            return sb.ToString();
+        }
+        public string CreateSession(string endpoint)
+        {
+            string url = smiteApi + endpoint 
+                + "json/" + devId + "/" + CreateSignature(endpoint) 
+                + "/" + CreateTimeStamp();
+            return url;
         }
     }
 }
